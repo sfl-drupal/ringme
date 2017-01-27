@@ -1,0 +1,8 @@
+button-generator:
+  version: '8.x-1.0'
+  # css:
+  #   theme:
+  #     css/naboo.styles.css: {}
+  #     css/naboo.clip.css: {}
+  js:
+    js/generator.js: {}

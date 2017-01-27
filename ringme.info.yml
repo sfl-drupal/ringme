@@ -1,0 +1,9 @@
+name: Ring Me
+description: 'Provide a form to generate a «Ring Me» button.'
+type: module
+core: 8.x
+version: '1.0'
+package: Ring
+
+libraries:
+  - ringme/button-generator

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Ring Me main file, hooks implementations.
+ */
+
+ /**
+  * Implements hook_theme().
+  */
+function ringme_theme($existing, $type, $theme, $path) {
+  return [
+    'ringme_button_generator' => [
+      'variables' => [],
+      'template'  => 'ringme-button-generator',
+    ],
+  ];
+}

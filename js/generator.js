@@ -8,19 +8,27 @@
 
   Drupal.behaviors.ringme_button_generator = {
     attach: function (context, settings) {
+      // Provide autofilling of Ring Me button textarea, using Ring alias input.
       var ringAliasInput = $('#ringme--button-generator-form #edit-ring-alias'),
-          ringMeButtonGeneratorTextarea = $('#ringme--button-generator-form #get-ringme-button-code'),
-          buttonCodePattern = '<script type="text/javascript" src="lasourcedessirois"></script><a href="ring:[ringalias]" type="button" class="ring--button">Ring Me</a>';
+          ringMeButtonPreview = $('#ringme--button-generator-form #preview-ringme-button'),
+          ringMeButtonGeneratorTextarea = $('#ringme--button-generator-form #get-ringme-button-code');
+      var buttonCodePattern = '<script type="text/javascript" src="lasourcedessirois"></script>' + "\n";
+      buttonCodePattern += '<a class="btn btn--beta btn--icon sflicon-gauge ring--button" href="ring:[ringalias]">Ring Me</a>';
 
       ringAliasInput.keypress(function (key) {
         var aliasInput = $(this);
-        setTimeout(updateGenerator, 100);
+        setTimeout(updateGeneratorAndPreview, 100);
 
-        function updateGenerator() {
+        function updateGeneratorAndPreview() {
           var typedAlias = aliasInput.val();
           if (typedAlias.length >= 3) {
-            var buttonCode = buttonCodePattern.replace("[ringalias]", typedAlias);
-            ringMeButtonGeneratorTextarea.html(buttonCode);
+            var buttonCode = buttonCodePattern.replace('[ringalias]', typedAlias);
+            ringMeButtonPreview.html(buttonCode);
+            ringMeButtonGeneratorTextarea.val(buttonCode);
+          }
+          else {
+            ringMeButtonPreview.empty();
+            ringMeButtonGeneratorTextarea.val('');
           }
         }
       });

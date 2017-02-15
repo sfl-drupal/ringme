@@ -1,0 +1,15 @@
+ringme.admin:
+  path: '/admin/config/system/ring-me'
+  defaults:
+    _form: '\Drupal\ringme\Form\RingMeButtonGeneratorAdminForm'
+    _title: '«Ring Me» button generator configuration'
+  requirements:
+    _permission: 'administer ringme button generator'
+
+ringme.generator_preview:
+  path: '/ring-me/generator-preview'
+  defaults:
+    _controller: '\Drupal\ringme\Controller\RoutesController::testPage'
+    _title: 'Ring Me - Test page'
+  requirements:
+    _permission: 'access ringme generator preview'

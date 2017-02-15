@@ -1,0 +1,8 @@
+ringme.admin:
+  route_name: ringme.admin
+  base_route: ringme.admin
+  title: 'Configure'
+ringme.generator_preview:
+  route_name: ringme.generator_preview
+  base_route: ringme.admin
+  title: Preview

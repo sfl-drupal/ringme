@@ -1,11 +1,9 @@
 {#
 /**
  * @file
- * Template for error pages.
+ * Template for Ring Me button generator.
  *
- * Availables variables are :
- * - code: response code
- * - $message: default error message
+ * No available variables.
  *
  * You should copy this template into your custom theme,
  * if you need to customise it.
@@ -15,25 +13,39 @@
 <div class="ringme ringme--button-generator">
   <form class="ringme--button-generator-form" data-drupal-selector="ringme--button-generator-form" action="#" method="post" id="ringme--button-generator-form" accept-charset="UTF-8">
 
-      <details data-drupal-selector="edit-button-configuration" id="edit-button-configuration" class="form-wrapper" open="open">
-        <summary role="button" aria-controls="edit-button-configuration" aria-expanded="true" aria-pressed="true">{{ 'Button configuration'|t }}</summary>
-        <div class="details-wrapper">
-          <div class="form-item form-type-textfield form-item-ring-alias">
-            <label for="edit-ring-alias" class="form-required">{{ 'Ring alias'|t }}</label>
-            <input data-drupal-selector="edit-ring-alias" id="edit-ring-alias" name="ring_alias" value="" size="60" maxlength="128" class="form-text required" required="required" aria-required="true" type="text">
-          </div>
-        </div>
-      </details>
+    <div class="grid__row">
 
-      <details data-drupal-selector="get-ringme-button" id="get-ringme-buttonconfiguration" class="form-wrapper" open="open">
-        <summary role="button" aria-controls="get-ringme-button" aria-expanded="true" aria-pressed="true">{{ '«Ring Me» button'|t }}</summary>
-        <div class="details-wrapper">
-          <div class="form-item form-type-textfield form-item-ringme-button-code">
-            <label for="get-ringme-button-code">{{ 'Copy and paste the code below.'|t }}</label>
-            <textarea readonly data-drupal-selector="get-ringme-button-code" id="get-ringme-button-code" name="get_ringme_button_code" rows="5" cols="60" class="form-textarea resize-vertical"></textarea>
+      <div class="grid__4">
+        <details data-drupal-selector="edit-button-configuration" id="edit-button-configuration" class="form-wrapper" open="open">
+          <summary role="button" aria-controls="edit-button-configuration" aria-expanded="true" aria-pressed="true">{{ 'Button configuration'|t }}</summary>
+          <div class="details-wrapper">
+            <div class="form-item form-type-textfield form-item-ring-alias">
+              <label for="edit-ring-alias" class="form-required">{{ 'Enter your Ring alias (or Ring ID).'|t }}</label>
+              <input data-drupal-selector="edit-ring-alias" id="edit-ring-alias" name="ring_alias" value="" maxlength="128" class="form-text required" required="required" aria-required="true" type="text">
+              <div class="description">{{ "If you don't have a Ring alias or a Ring ID, download Ring and create one."|t }}</div>
+            </div>
           </div>
-        </div>
-      </details>
+        </details>
+      </div>
+
+      <div class="grid__8">
+        <details data-drupal-selector="get-ringme-button" id="get-ringme-buttonconfiguration" class="form-wrapper" open="open">
+          <summary role="button" aria-controls="get-ringme-button" aria-expanded="true" aria-pressed="true">{{ '«Ring Me» button'|t }}</summary>
+          <div class="details-wrapper">
+            <div class="form-item form-type-textfield form-item-ringme-button-code">
+              <label for="preview-ringme-button">{{ 'Preview your «Ring Me» button.'|t }}</label>
+              <div id="preview-ringme-button" class="preview"></div>
+            </div>
+
+            <div class="form-item form-type-textfield form-item-ringme-button-code">
+              <label for="get-ringme-button-code">{{ 'Copy and paste the code below.'|t }}</label>
+              <textarea readonly data-drupal-selector="get-ringme-button-code" id="get-ringme-button-code" name="get_ringme_button_code" rows="5" class="form-textarea resize-vertical"></textarea>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
 
   </form>
 </div>

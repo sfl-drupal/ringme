@@ -10,9 +10,19 @@
   */
 function ringme_theme($existing, $type, $theme, $path) {
   return [
+
+    // Button generator.
     'ringme_button_generator' => [
       'variables' => [],
       'template'  => 'ringme-button-generator',
+    ],
+
+    // Test page.
+    'ringme_generator_preview' => [
+      'variables' => [
+        'form' => NULL,
+      ],
+      'template' => 'ringme-generator-preview',
     ],
   ];
 }

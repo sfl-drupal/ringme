@@ -1,0 +1,6 @@
+administer ringme button generator:
+  title: 'Administer Ring Me button generator'
+  description: 'Allow user to administer Ring Me button generator (add options for example).'
+access ringme generator preview:
+  title: 'Access Ring Me generator preview'
+  description: 'Allow user to access to a preview page, containing the Ring Me button generator form.'

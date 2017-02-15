@@ -1,0 +1,13 @@
+ringme.admin:
+  title: 'Ring Me button generator'
+  description: 'Manage «Ring Me» button generator.'
+  parent: system.admin_config_system
+  route_name: ringme.admin
+  weight: 112
+
+ringme.generator_preview:
+  title: 'Preview'
+  description: 'Show a preview of «Ring Me» button generator.'
+  parent: ringme.admin
+  route_name: ringme.generator_preview
+  weight: 0

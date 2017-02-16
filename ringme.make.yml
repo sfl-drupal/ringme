@@ -1,0 +1,11 @@
+core: 8.x
+api: 2
+
+defaults:
+  projects:
+    subdir: 'contrib'
+
+projects:
+
+  block_field:
+    version: '1.0-alpha3'

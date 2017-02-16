@@ -7,8 +7,5 @@ package: Ring
 
 configure: ringme.admin
 
-dependencies:
-  - block_field
-
 libraries:
   - ringme/button-generator

@@ -1,34 +1,27 @@
-#ringme--button-generator-form .grid__row {
+.ringme--button-generator {
   border: 1px solid #CCC;
+  background: #FFF;
 }
 
-#ringme--button-generator-form .grid__4,
-#ringme--button-generator-form .grid__8 {
+#ringme--button-generator-form details {
+  border: none;
   padding: 0;
 }
 
-#ringme--button-generator-form details {
-  border-width: 0;
-}
-#ringme--button-generator-form details {
-  border: none;
-}
 #ringme--button-generator-form details summary {
   display: none;
 }
 
+#ringme--button-generator-form input,
+#ringme--button-generator-form textarea,
 #ringme--button-generator-form div.preview {
   margin: 0.4em 0 0;
   border: 1px solid #AAA;
-  padding: 0.8em;
+  padding: 0.4em;
+  background: #FEFCFF;
+  width: 100%;
+}
+#ringme--button-generator-form div.preview {
   min-height: 58px;
   text-align: center;
-}
-
-#ringme--button-generator-form input,
-#ringme--button-generator-form textarea {
-  margin: 0.4em 0 0;
-  border: 1px solid #AAA;
-  padding: 0.4em;
-  width: 100%;
 }

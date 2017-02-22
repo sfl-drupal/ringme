@@ -5,6 +5,11 @@ core: 8.x
 version: '1.0'
 package: Ring
 
+# Describe here a project name and a path for translations files
+project: ringme
+interface translation project: 'ringme'
+interface translation server pattern: modules/contrib/ringme/translations/%project-%core-%version.%language.po
+
 configure: ringme.admin
 
 libraries:

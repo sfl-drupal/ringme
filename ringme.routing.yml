@@ -10,6 +10,6 @@ ringme.generator_preview:
   path: '/ring-me/generator-preview'
   defaults:
     _controller: '\Drupal\ringme\Controller\RoutesController::testPage'
-    _title: 'Ring Me - Test page'
+    _title: 'Ring Me - Preview'
   requirements:
     _permission: 'access ringme generator preview'

@@ -1,0 +1,67 @@
+# French translation of Ring Me
+# Copyright (c) 2017 Savoir-faire Linux
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ring Me (8.x)\n"
+"POT-Creation-Date: 2017-02-22 17:19+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+msgid "Ring Me button generator"
+msgstr "Générateur du bouton «Ring Me»"
+
+msgid "Manage «Ring Me» button generator."
+msgstr "Configuration du générateur de bouton «Ring Me»"
+
+msgid "Show a preview of «Ring Me» button generator."
+msgstr "Montre un aperçu du générateur de bouton «Ring Me»."
+
+msgid "Administer Ring Me button generator"
+msgstr "Administrer le générateur de bouton «Ring Me»"
+
+msgid "Allow user to administer Ring Me button generator (add options for example)."
+msgstr "Autorise l'utilisateur à administrer le générateur de bouton «Ring Me» (ajouter des options par exemple)."
+
+msgid "Access Ring Me generator preview"
+msgstr "Accéder à l'aperçu du générateur de bouton «Ring Me»"
+
+msgid "Allow user to access to a preview page, containing the Ring Me button generator form."
+msgstr "Autorise l'utilisateur à accéder à une page d'aperçu, contenant le formulaire de génération de bouton «Ring Me»."
+
+msgid "«Ring Me» button generator configuration"
+msgstr "Configuration du générateur de bouton «Ring Me»"
+
+msgid "Ring Me - Preview"
+msgstr "Ring Me - Aperçu"
+
+msgid "Button configuration"
+msgstr "Configuration du bouton"
+
+msgid "Enter your Ring alias (or Ring ID)."
+msgstr "Saisissez votre alias Ring (ou ID Ring)."
+
+msgid "If you don't have a Ring alias or a Ring ID, download Ring and create one."
+msgstr "Si vous n'avez pas encore d'alias ou d'ID Ring, téléchargez Ring et créez-en un."
+
+msgid "«Ring Me» button"
+msgstr "Bouton «Ring Me»"
+
+msgid "Preview your «Ring Me» button."
+msgstr "Prévisualisez votre bouton «Ring Me»."
+
+msgid "Copy and paste the code below."
+msgstr "Copiez-collez le code ci-dessous."
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""

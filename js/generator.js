@@ -14,7 +14,7 @@
           previousAlias        = ringAliasInput.val(),
           ringMeButtonPreview  = $('#ringme--button-generator-form #preview-ringme-button'),
           ringMeBtnGenTextarea = $('#ringme--button-generator-form #get-ringme-button-code'),
-          buttonScript         = '<script type="text/javascript" src="https://rawgit.com/savoirfairelinux/ringme.js/master/src/ringme.js"></script>',
+          buttonScriptURL      = 'https://rawgit.com/savoirfairelinux/ringme.js/master/src/ringme.js',
           buttonCodePattern    = '<div id="ringme-[ringalias]">' + "\n";
       buttonCodePattern += '  <script type="text/javascript">' + "\n"
       buttonCodePattern += '    RingMe.ui({' + "\n"
@@ -31,8 +31,11 @@
         if (typedAlias.length > 2) {
           if (typedAlias != previousAlias) {
             var buttonCode = buttonCodePattern.replace(/\[ringalias\]/g, typedAlias);
-            ringMeButtonPreview.html(buttonScript + "\n" + buttonCode);
-            ringMeBtnGenTextarea.val(buttonScript + "\n" + buttonCode);
+            ringMeBtnGenTextarea.val('<script src="' + buttonScriptURL + '></script>' + "\n" + buttonCode);
+            $.getScript(buttonScriptURL)
+              .done(function (script, textStatus) {
+                ringMeButtonPreview.html(buttonCode);
+              });
             previousAlias = typedAlias;
           }
         }

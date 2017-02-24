@@ -8,20 +8,30 @@
 
   Drupal.behaviors.ringme_button_generator = {
     attach: function (context, settings) {
+      var handle = 0;
+
       var ringAliasInput       = $('#ringme--button-generator-form #edit-ring-alias'),
           previousAlias        = ringAliasInput.val(),
           ringMeButtonPreview  = $('#ringme--button-generator-form #preview-ringme-button'),
           ringMeBtnGenTextarea = $('#ringme--button-generator-form #get-ringme-button-code'),
-          buttonScript         = '<script type="text/javascript" src="lasourcedessirois.js"></script>',
-          buttonCodePattern    = '<a class="btn btn--beta btn--icon sflicon-gauge ring--button" href="ring:[ringalias]">Ring Me</a>';
+          buttonScript         = '<script type="text/javascript" src="https://rawgit.com/savoirfairelinux/ringme.js/master/src/ringme.js"></script>',
+          buttonCodePattern    = '<div id="ringme-[ringalias]">' + "\n";
+      buttonCodePattern += '  <script type="text/javascript">' + "\n"
+      buttonCodePattern += '    RingMe.ui({' + "\n"
+      buttonCodePattern += '      "action": "call",' + "\n"
+      buttonCodePattern += '      "identifier": "[ringalias]",' + "\n"
+      buttonCodePattern += '      "container": "ringme-[ringalias]"' + "\n"
+      buttonCodePattern += '    });' + "\n"
+      buttonCodePattern += '  </script>' + "\n"
+      buttonCodePattern += '</div>';
 
       // Provide autofilling of Ring Me button textarea, using Ring alias input.
       function updateGeneratorAndPreview() {
         var typedAlias = ringAliasInput.val();
         if (typedAlias.length > 2) {
           if (typedAlias != previousAlias) {
-            var buttonCode = buttonCodePattern.replace('[ringalias]', typedAlias);
-            ringMeButtonPreview.html(buttonCode);
+            var buttonCode = buttonCodePattern.replace(/\[ringalias\]/g, typedAlias);
+            ringMeButtonPreview.html(buttonScript + "\n" + buttonCode);
             ringMeBtnGenTextarea.val(buttonScript + "\n" + buttonCode);
             previousAlias = typedAlias;
           }
@@ -31,7 +41,8 @@
           ringMeBtnGenTextarea.val('');
         }
       }
-      setInterval(updateGeneratorAndPreview, 200);
+
+      handle = setInterval(updateGeneratorAndPreview, 200);
 
       // Select all textarea content on focus.
       ringMeBtnGenTextarea.focus(function () {

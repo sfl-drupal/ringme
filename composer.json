@@ -1,0 +1,17 @@
+{
+    "name": "sfl-drupal/ringme",
+    "description": "Ring Me is a Drupal module allowing to to place a block in your site.",
+    "type": "drupal-module",
+    "homepage": "https://github.com/sfl-drupal/ringme",
+    "authors": [
+        {
+            "name": "Philippe Mouchel",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/sfl-drupal/ringme"
+    },
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+}
